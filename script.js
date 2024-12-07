@@ -47,6 +47,7 @@ links = ['https://piclinks.in/view2?id=464763', 'https://piclinks.in/view2?id=46
 stop = 0
 async function demo(times) {
     for (let i = 1; i < times.length; i++) {
+        alart(i)
         if (stop===1){break}
         openedWindow = window.open(links[i], '_blank')
         await sleep(16000);
@@ -64,12 +65,12 @@ async function demo(times) {
                 bar_left.style.transform = 'rotate(' + percentageToDegrees(percent -50) + 'deg)'
             }
         }
-        if (times[i]===0){
-            await sleep(10000)
-        }else {
-            await sleep(times[i]-18000)
-        }
-        
+        //if (times[i]===0){
+        //    await sleep(10000)
+        //}else {
+        //    await sleep(times[i]-18000)
+        //}
+        alart(i)
     }
     // console.log('Done');
 }
