@@ -48,12 +48,13 @@ stop = 0
 async function demo(times) {
     for (let i = 1; i < times.length; i++) {
         if (stop===1){break}
-        openedWindow = window.open(links[i], '_blank')
-        if (!openedWindow) {alert("oops..seems like a pop-up blocker is enabled. Please disable")}
-        await sleep(16000);
-        openedWindow.close()
+        if (i===0) {
+            openedWindow = window.open(links[i], '_blank')
+        } else {
+            openedWindow.location.href = links[i]
+        }
+        await sleep(18000);
         if (stop===1){break}
-        await sleep(2000)
 
         percent = Math.round((( (i+1)*100)/times.length )*10)/10
         percent_field.innerText = percent + "%"
@@ -71,6 +72,7 @@ async function demo(times) {
         //    await sleep(times[i]-18000)
         //}
     }
+    openedWindow.close()
     // console.log('Done');
 }
 
