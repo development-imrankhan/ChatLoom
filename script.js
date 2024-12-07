@@ -47,19 +47,13 @@ links = ['https://piclinks.in/view2?id=464763', 'https://piclinks.in/view2?id=46
 stop = 0
 async function demo(times) {
     for (let i = 1; i < times.length; i++) {
-        confirm(i)
         if (stop===1){break}
-        confirm(i)
         openedWindow = window.open(links[i], '_blank')
-        confirm(i)
+        if (!openedWindow) {alert("oops..seems like a pop-up blocker is enabled. Please disable")}
         await sleep(16000);
-        confirm(i)
         openedWindow.close()
-        confirm(i)
         if (stop===1){break}
-        confirm(i)
         await sleep(2000)
-        confirm(i)
 
         percent = Math.round((( (i+1)*100)/times.length )*10)/10
         percent_field.innerText = percent + "%"
