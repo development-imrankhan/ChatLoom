@@ -64,11 +64,11 @@ async function demo(times) {
                 bar_left.style.transform = 'rotate(' + percentageToDegrees(percent -50) + 'deg)'
             }
         }
-        //if (times[i]===0){
-        //    await sleep(10000)
-        //}else {
-        //    await sleep(times[i]-18000)
-        //}
+        if (times[i]===0){
+            await sleep(10000)
+        }else {
+            await sleep(times[i]-18000)
+        }
         
     }
     // console.log('Done');
