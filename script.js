@@ -49,11 +49,17 @@ async function demo(times) {
     for (let i = 1; i < times.length; i++) {
         alert(i)
         if (stop===1){break}
+        alert(i)
         openedWindow = window.open(links[i], '_blank')
+        alert(i)
         await sleep(16000);
+        alert(i)
         openedWindow.close()
+        alert(i)
         if (stop===1){break}
+        alert(i)
         await sleep(2000)
+        alert(i)
 
         percent = Math.round((( (i+1)*100)/times.length )*10)/10
         percent_field.innerText = percent + "%"
