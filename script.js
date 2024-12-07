@@ -70,7 +70,6 @@ async function demo(times) {
         //}else {
         //    await sleep(times[i]-18000)
         //}
-        alert(i)
     }
     // console.log('Done');
 }
