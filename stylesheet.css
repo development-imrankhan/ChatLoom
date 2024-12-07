@@ -121,6 +121,11 @@
 html, body {margin: 0; height: 100%; overflow: hidden}
 .main, .main-body {height: 100%; overflow: hidden}
 
+.wait {
+    font-weight: 700;
+    animation: opacy 5s infinite;
+}
+
 @keyframes loading-1{
     0%{
         -webkit-transform: rotate(180deg);
@@ -173,4 +178,19 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 @media only screen and (max-width: 990px){
     .progress{ margin-bottom: 20px; }
+}
+
+@keyframes opacy{
+    0%{
+        scale: .7;
+        opacity: .2;
+    }
+    60%{
+        scale: 1;
+        opacity: 1;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
 }
