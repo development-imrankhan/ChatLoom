@@ -103,7 +103,7 @@ for (let i=0; i<links.length; i++) {
         times.push(i)
     } else {
         randInt = getRandomInt(140, 200)
-        last_time = 15 + randInt
+        last_time = 100 + randInt
         times.push(last_time*1000)
     }
 }
