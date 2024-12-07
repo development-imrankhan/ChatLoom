@@ -12,6 +12,23 @@ function percentageToDegrees(percentage) {
     return percentage / 100 * 360
 }
 
+function shuffle(array) {
+    let currentIndex = array.length;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+}
+
+
 percent_field = document.querySelector(".progress-value")
 bar_left = document.querySelector(".progress-left .progress-bar")
 bar_right = document.querySelector(".progress-right .progress-bar")
@@ -40,7 +57,7 @@ links = ['https://piclinks.in/view2?id=464763', 'https://piclinks.in/view2?id=46
          'https://piclinks.in/view2?id=464856', 'https://piclinks.in/view2?id=464857', 'https://piclinks.in/view2?id=464858', 'https://piclinks.in/view2?id=464859', 
          'https://piclinks.in/view2?id=464860', 'https://piclinks.in/view2?id=464861', 'https://piclinks.in/view2?id=464862', 'https://piclinks.in/view2?id=464863', 
          'https://piclinks.in/view2?id=464865', 'https://piclinks.in/view2?id=464866', 'https://piclinks.in/view2?id=464867', 'https://piclinks.in/view2?id=464868']
-
+shuffle(links)
 
 
 
