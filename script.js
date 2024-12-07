@@ -68,7 +68,7 @@ async function demo(times) {
             }
         }
         if (times[i]===0){
-            await sleep(10000)
+            await sleep(15000)
         }else {
             await sleep(times[i]-18000)
         }
