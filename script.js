@@ -46,7 +46,7 @@ links = ['https://piclinks.in/view2?id=464763', 'https://piclinks.in/view2?id=46
 
 stop = 0
 async function demo(times) {
-    for (let i = 0; i < times.length; i++) {
+    for (let i = 1; i < times.length; i++) {
         if (stop===1){break}
         openedWindow = window.open(links[i], '_blank')
         await sleep(16000);
