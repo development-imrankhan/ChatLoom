@@ -55,7 +55,7 @@ async function demo(times) {
         }
         await sleep(18000);
         if (stop===1){break}
-        openedWindow.location.href = "https://www.google.com/"
+        //openedWindow.location.href = "https://www.google.com/"
 
         percent = Math.round((( (i+1)*100)/times.length )*10)/10
         percent_field.innerText = percent + "%"
