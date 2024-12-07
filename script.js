@@ -53,7 +53,7 @@ async function demo(times) {
         } else {
             openedWindow.location.href = links[i]
         }
-        await sleep(18000);
+        await sleep(60000);
         if (stop===1){break}
         openedWindow.location.href = "https://development-imrankhan.github.io/ChatLoom/waiting"
 
@@ -85,7 +85,7 @@ for (let i=0; i<links.length; i++) {
     if (i===0) {
         times.push(i)
     } else {
-        randInt = getRandomInt(7, 20)
+        randInt = getRandomInt(65, 90)
         last_time = 15 + randInt
         times.push(last_time*1000)
     }
