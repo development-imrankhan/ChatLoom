@@ -70,7 +70,7 @@ async function demo(times) {
         if (times[i]===0){
             await sleep(15000)
         }else {
-            await sleep(times[i]-18000)
+            await sleep(times[i]-60000)
         }
     }
     openedWindow.close()
@@ -85,7 +85,7 @@ for (let i=0; i<links.length; i++) {
     if (i===0) {
         times.push(i)
     } else {
-        randInt = getRandomInt(65, 90)
+        randInt = getRandomInt(90, 150)
         last_time = 15 + randInt
         times.push(last_time*1000)
     }
