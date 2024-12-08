@@ -81,11 +81,11 @@ async function demo(times) {
                 bar_right.style.transform = 'rotate(' + percentageToDegrees(percent) + 'deg)'
             } else {
                 bar_right.style.transform = 'rotate(180deg)'
-                bar_left.style.transform = 'rotate(' + percentageToDegrees(percent -50) + 'deg)'
+                bar_left.style.transform = 'rotate(' + percentageToDegrees(percent-50) + 'deg)'
             }
         }
         if (times[i]===0){
-            await sleep(25000)
+            await sleep(30000)
         }else {
             await sleep(times[i]-100000)
         }
@@ -102,7 +102,7 @@ for (let i=0; i<links.length; i++) {
     if (i===0) {
         times.push(i)
     } else {
-        randInt = getRandomInt(140, 200)
+        randInt = getRandomInt(60, 150)
         last_time = 100 + randInt
         times.push(last_time*1000)
     }
